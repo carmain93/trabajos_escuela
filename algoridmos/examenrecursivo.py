@@ -1,5 +1,6 @@
 from examen import ListaEnlazada
 class ListaEnlazada(ListaEnlazada):
+    
     def suma_recursiva(self,nodo = None):
         if nodo is None:
             nodo=self.cabeza
