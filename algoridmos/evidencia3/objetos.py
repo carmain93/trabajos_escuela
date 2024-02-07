@@ -1,11 +1,11 @@
 class Estudiante:
-    def init(self,nombre,edad,calificacion):
+    def __init__(self,nombre,edad,calificacion):
         self.nombre=nombre
         self.edad= edad
         self.calificacion=calificacion
 
 #crear el arreglo
-estudiante =[
+estudiantes =[
     Estudiante("Miguel",20,85),
     Estudiante("Brisa",22,70),
     Estudiante("Jesus",18,92),
@@ -14,13 +14,14 @@ estudiante =[
     Estudiante("Rodolfo",25,79)
 ]
 
-print(estudiante.nombre)
-#estudiante con la calificacion mas alta
-maxestu=max(estudiante,key=lambda estudiante: estudiante.calificacion)
 
-    
-    
-print(f"estudiante con la calificacion mas alta")
-print(f"nombre: {maxestu.nombre}")
-print(f"edad: {maxestu.edad}")
-print(f"calificacion: {maxestu.calificacion}")
+#estudiante con la calificacion mas alta
+maxestu=max(estudiante.calificacion for estudiante in estudiantes)
+
+print("estudiantes con maxima calificacion")
+for estudiante in estudiantes:
+    if estudiante.calificacion == maxestu:
+        print(f"estudiante con la calificacion mas alta")
+        print(f"nombre: {estudiante.nombre}")
+        print(f"edad: {estudiante.edad}")
+        print(f"calificacion: {estudiante.calificacion}")
