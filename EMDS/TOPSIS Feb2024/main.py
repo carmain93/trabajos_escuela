@@ -37,9 +37,9 @@ print("\n -------------------------------------------")
 print("Controles iniciales" )
 print()
 print("Grado de preferencia para cada criterio")
-w = [0.400, 0.200, 0.030, 0.070, 0.300]
+#w = [0.400, 0.200, 0.030, 0.070, 0.300]
 #w = [0.300, 0.200, 0.200, 0.150, 0.150] #Original del artículo
-#w = [0.200, 0.200, 0.200, 0.200, 0.200]
+w = [0.200, 0.200, 0.200, 0.200, 0.200]
 #w = [0.123, 0.099, 0.043, 0.343, 0.392]
 weights = pd.Series(w, index=attributes)
 print(weights,"\n")
@@ -77,12 +77,12 @@ weighted_matrix = normalized_matrix * weights
 ideal_best = weighted_matrix.max()
 ideal_worst = weighted_matrix.min()
 
-#print("\n-------------------------------------------")
-#print("Paso 3: Determinación de las soluciones ideal y anti-ideal")
-#print("Ideal:")
-#print(ideal_best)
-#print("\nAnti-Ideal:")
-#print(ideal_worst)
+print("\n-------------------------------------------")
+print("Paso 3: Determinación de las soluciones ideal y anti-ideal")
+print("Ideal:")
+print(ideal_best)
+print("\nAnti-Ideal:")
+print(ideal_worst)
 
 
 ############################################################
@@ -91,12 +91,12 @@ ideal_worst = weighted_matrix.min()
 s_best = np.sqrt(((weighted_matrix - ideal_best) ** 2).sum(axis=1))
 s_worst = np.sqrt(((weighted_matrix - ideal_worst) ** 2).sum(axis=1))
 
-#print("\n-------------------------------------------")
-#print("Paso 4: Cálculo de las distancias a las soluciones ideal y anti-ideal")
-#print("Distancias a la solución ideal:")
-#print(s_best)
-#print("\nDistancias a la solución anti-ideal:")
-#print(s_worst)
+print("\n-------------------------------------------")
+print("Paso 4: Cálculo de las distancias a las soluciones ideal y anti-ideal")
+print("Distancias a la solución ideal:")
+print(s_best)
+print("\nDistancias a la solución anti-ideal:")
+print(s_worst)
 
 ############################################################
 #--- Pasos 5: Cálculo de la puntuación de proximidad relativa
@@ -144,7 +144,7 @@ dataAlt = pd.DataFrame(Alt)
 dataw = pd.DataFrame(w)
 
 #with pd.ExcelWriter('Experimentos/TOPSIS.xlsx', engine='xlsxwriter') as writer:
-with pd.ExcelWriter('Experimentos/TOPSIS.xlsx', engine='xlsxwriter') as writer:
+with pd.ExcelWriter('Experimentos/TOPSIS46.xlsx', engine='xlsxwriter') as writer:
     #dataI.to_excel(writer, sheet_name='Iniciales')
     dataT.to_excel(writer, sheet_name='Tiempos')
     dataw.to_excel(writer, sheet_name='w')
