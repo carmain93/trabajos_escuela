@@ -23,3 +23,10 @@ class Pila:
     def mostrar_elementos(self):
         print("los elementos de la pila son: ")
         print(self.elementos)
+        
+a=Pila()
+a.insertar(1)
+a.insertar(2)
+a.insertar(3)
+a.mostrar_elementos()
+print(a.cima())

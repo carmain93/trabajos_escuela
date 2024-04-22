@@ -1,0 +1,24 @@
+{
+    "platillos": [
+      {
+        "id": 1,
+        "nombre": "Pizza especial",
+        "precio": 289
+      },
+      {
+        "id": 2,
+        "nombre": "Pizza margarita",
+        "precio": 10.50
+      },
+      {
+        "id": 3,
+        "nombre": "Ensalada César",
+        "precio": 7.25
+      },
+      {
+        "id": 4,
+        "nombre": "Tacos al pastor",
+        "precio": 9.75
+      }
+    ]
+  }
