@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "843256667369",
+    "firebase_url": "https://sensor-e8ffe-default-rtdb.firebaseio.com",
+    "project_id": "sensor-e8ffe",
+    "storage_bucket": "sensor-e8ffe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843256667369:android:d1c1981848979c4d1ce478",
+        "android_client_info": {
+          "package_name": "mx.edu.utch.rfdata"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs8ILex9E0YtjhkZ2uPubbPw_8Dw2BB9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
